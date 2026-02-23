@@ -1,59 +1,249 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Lucas Queiroz</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Lucas Queiroz</title>
 
-    <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="logo">
-          <img
-            src="assets/images/Safe Profile - Catppuccin Mocha - Small.png"
-            alt="Lucas Queiroz Profile Picture"
-            class="profile-img"
-          />
-          <h1>Lucas Queiroz</h1>
-        </div>
-        <nav>
-          <a href="/" class="active">home</a>
-          <a href="work.html">work</a>
-          <a href="uses.html">uses</a>
-        </nav>
-      </header>
-      <main>
-        <section id="about">
-          <h2>About</h2>
-          <p>
-            Software Engineer who enjoys feature flags and developer tooling.
-            Currently working as a Full-Stack Engineer. Worked with a big
-            variety of languages, but right now, focused on Python and React
-            with TypeScript.
-          </p>
-          <nav>
-            <a href="work.html">more</a>
-          </nav>
-        </section>
-        <section id="blog">
-          <h2>Blog</h2>
-          <!-- <article>
-            <a href="/blog/post.html" class="article-title">{{ .Title }}</a>
-            <time class="article-timestamp">{{ .Date }}</time>
-            <p>...</p>
-          </article> -->
-          <!-- <nav>
-            <a href="/blog">archive</a>
-            <a href="blog/rss.xml">rss</a>
-          </nav> -->
-          <p>This website is still in progress. A blog will be added soon.</p>
-        </section>
-      </main>
-    </div>
-  </body>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/images/favicon/favicon.ico"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/images/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/images/favicon/favicon-16x16.png"
+        />
+        <style>
+            :root {
+                --border-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='48' style='font-family:monospace;font-size:16px;fill:%23ebbcba;dominant-baseline:auto'><text x='0'  y='14'>+</text><text x='10' y='14'>-</text><text x='20' y='14'>+</text><text x='0'  y='30'>|</text><text x='20' y='30'>|</text><text x='0'  y='46'>+</text><text x='10' y='46'>-</text><text x='20' y='46'>+</text></svg>");
+                --base: #191724;
+                --text: #e0def4;
+                --muted: #6e6a86;
+                --love: #eb6f92;
+                --rose: #ebbcba;
+                --foam: #9ccfd8;
+                --pine: #31748f;
+                --iris: #c4a7e7;
+
+                --holo-color: var(--rose);
+                --holo-dim: var(--rose);
+                --speed: 3s;
+                --glitch-red: rgba(235, 111, 146, 0.4);
+                --glitch-cyan: rgba(49, 116, 143, 0.4);
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                font-family: monospace;
+                background-color: var(--base);
+            }
+
+            main {
+                color: var(--text);
+                text-align: center;
+                padding: 2rem;
+                border-style: solid;
+                border-width: 16px 10px;
+                border-image-source: var(--border-svg);
+                border-image-slice: 16 10 16 10;
+                border-image-repeat: round;
+                width: min(50%, 50ch);
+            }
+
+            h1 {
+                margin: 1rem;
+            }
+
+            .subtitle {
+                color: var(--muted);
+                text-justify: inter-word;
+                text-align: justify;
+            }
+
+            a,
+            a:visited {
+                color: unset;
+                text-decoration: none;
+                border-bottom: solid 0.2ch var(--rose);
+                margin: 0.5rem;
+            }
+
+            a:hover {
+                border-bottom: solid 0.3ch var(--rose);
+                font-weight: bold;
+            }
+
+            nav {
+                margin-top: 1rem;
+            }
+
+            @keyframes blink {
+                50% {
+                    opacity: 0;
+                }
+            }
+            .cursor::before {
+                content: "$ ";
+                color: var(--love);
+            }
+            .cursor::after {
+                content: "█";
+                animation: blink 1s step-end infinite;
+                color: var(--rose);
+            }
+
+            .hologram {
+                position: relative;
+                display: inline-block;
+                filter: drop-shadow(0 0 2px var(--holo-color))
+                    drop-shadow(0 0 6px var(--holo-dim));
+            }
+
+            .hologram img {
+                display: block;
+                width: 180px;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 4px;
+                animation:
+                    glitch-move var(--speed) infinite,
+                    glitch-color var(--speed) infinite,
+                    glitch-clip var(--speed) infinite;
+            }
+
+            @keyframes glitch-move {
+                0%,
+                79%,
+                100% {
+                    transform: translate(0);
+                }
+                81% {
+                    transform: translate(-4px, 2px);
+                }
+                83% {
+                    transform: translate(4px, -2px);
+                }
+                85% {
+                    transform: translate(-2px, -2px);
+                }
+                87% {
+                    transform: translate(2px, 2px);
+                }
+                89% {
+                    transform: translate(0);
+                }
+            }
+
+            @keyframes glitch-color {
+                0%,
+                79%,
+                100% {
+                    filter: drop-shadow(2px 0 var(--glitch-red))
+                        drop-shadow(-2px 0 var(--glitch-cyan));
+                }
+                81%,
+                85%,
+                89% {
+                    filter: drop-shadow(6px 0 var(--love))
+                        drop-shadow(-6px 0 var(--pine)) brightness(1.3);
+                }
+                83%,
+                87% {
+                    filter: drop-shadow(-4px 0 var(--love))
+                        drop-shadow(4px 0 var(--pine)) saturate(3);
+                }
+            }
+
+            @keyframes glitch-clip {
+                0%,
+                79%,
+                100% {
+                    clip-path: none;
+                }
+                80% {
+                    clip-path: inset(30% 0 40% 0);
+                }
+                82% {
+                    clip-path: inset(10% 0 60% 0);
+                }
+                84% {
+                    clip-path: inset(60% 0 5% 0);
+                }
+                86% {
+                    clip-path: inset(45% 0 30% 0);
+                }
+                88% {
+                    clip-path: inset(0% 0 80% 0);
+                }
+                90% {
+                    clip-path: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="card">
+                <div class="hologram">
+                    <picture>
+                        <source
+                            srcset="assets/images/profile/profile.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            src="assets/images/profile/profile.png"
+                            alt="An AI generated image of Lucas Queiroz, wearing a space suit, using the Rosé Pine color palette."
+                            loading="lazy"
+                            decoding="async"
+                            width="128px"
+                            height="128px"
+                        />
+                    </picture>
+                </div>
+                <h1 class="cursor">Lucas Queiroz</h1>
+                <p class="subtitle">
+                    Software Engineer who enjoys feature flags and developer
+                    tooling. Experience with internal and external API
+                    development, and financial and payment systems. Worked
+                    developing RESTful APIs, microservices, Feature Flag
+                    systems, integrating webhooks, etc.
+                </p>
+                <nav>
+                    <a href="work.html">/work</a>
+                    <!--<a href="https://curiousfurbytes.dev">/blog</a>-->
+                    <a href="https://linkedin.com/in/lucas-queiroz">
+                        /linkedin</a
+                    >
+                    <a href="https://github.com/CuriousFurBytes">/github</a>
+                </nav>
+                <nav>
+                    <a href="mailto:hello@lucasqueiroz.dev">
+                        hello@lucasqueiroz.dev
+                    </a>
+                </nav>
+            </div>
+        </main>
+    </body>
 </html>
