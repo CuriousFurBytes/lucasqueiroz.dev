@@ -1,59 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Lucas Queiroz</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Lucas Queiroz</title>
 
-    <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="logo">
-          <img
-            src="assets/images/Safe Profile - Catppuccin Mocha - Small.png"
-            alt="Lucas Queiroz Profile Picture"
-            class="profile-img"
-          />
-          <h1>Lucas Queiroz</h1>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/images/favicon/favicon.ico"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/images/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/images/favicon/favicon-16x16.png"
+        />
+        <link rel="stylesheet" href="assets/css/fonts.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body>
+        <div class="container center-card">
+            <main class="char-border small-card">
+                <div class="card">
+                    <div class="hologram">
+                        <picture>
+                            <source
+                                srcset="assets/images/profile/profile.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="assets/images/profile/profile.png"
+                                alt="An AI generated image of Lucas Queiroz, wearing a space suit, using the Rosé Pine color palette."
+                                loading="lazy"
+                                decoding="async"
+                                width="128px"
+                                height="128px"
+                            />
+                        </picture>
+                    </div>
+                    <h1 class="cursor">Lucas Queiroz</h1>
+                    <p class="subtitle">
+                        Working as a Software Engineer, mainly with Python and
+                        TypeScript. On my free time, I enjoy reading blogs and
+                        discovering new apps, CLIs and TUIs, and learning more
+                        about feature flags and developer tooling.
+                    </p>
+                    <nav>
+                        <a href="work.html">/work</a>
+                        <!--<a href="https://curiousfurbytes.dev">/blog</a>-->
+                        <a href="https://linkedin.com/in/lucas-queiroz">
+                            /linkedin</a
+                        >
+                        <a href="https://github.com/CuriousFurBytes">/github</a>
+                    </nav>
+                    <nav>
+                        <a href="mailto:hello@lucasqueiroz.dev">
+                            hello@lucasqueiroz.dev
+                        </a>
+                    </nav>
+                </div>
+            </main>
         </div>
-        <nav>
-          <a href="/" class="active">home</a>
-          <a href="work.html">work</a>
-          <a href="uses.html">uses</a>
-        </nav>
-      </header>
-      <main>
-        <section id="about">
-          <h2>About</h2>
-          <p>
-            Software Engineer who enjoys feature flags and developer tooling.
-            Currently working as a Full-Stack Engineer. Worked with a big
-            variety of languages, but right now, focused on Python and React
-            with TypeScript.
-          </p>
-          <nav>
-            <a href="work.html">more</a>
-          </nav>
-        </section>
-        <section id="blog">
-          <h2>Blog</h2>
-          <!-- <article>
-            <a href="/blog/post.html" class="article-title">{{ .Title }}</a>
-            <time class="article-timestamp">{{ .Date }}</time>
-            <p>...</p>
-          </article> -->
-          <!-- <nav>
-            <a href="/blog">archive</a>
-            <a href="blog/rss.xml">rss</a>
-          </nav> -->
-          <p>This website is still in progress. A blog will be added soon.</p>
-        </section>
-      </main>
-    </div>
-  </body>
+    </body>
 </html>

@@ -1,0 +1,56 @@
+.timeline {
+    margin-top: 1.5rem;
+    --tl-color: %23ebbcba;
+}
+
+.timeline section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 60ch) {
+    .timeline section {
+        grid-template-columns: 20ch 1fr;
+        gap: 0.5rem 1rem;
+    }
+}
+
+.timeline section time {
+    text-align: left;
+    color: var(--color-muted);
+    white-space: nowrap;
+}
+
+.timeline .entry {
+    padding: 0 0 1.5rem 0;
+}
+
+h4 {
+    color: var(--color-muted);
+    margin-top: 0.25rem;
+}
+
+.entry p,
+.entry ul {
+    margin-top: 0.5rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.skills li {
+    background-color: rgba(var(--color-rose-rgb), 0.6);
+    border-color: var(--color-rose);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    color: var(--color-text);
+}
