@@ -82,11 +82,9 @@ h4 {
 }
 
 .skills li {
-    background-color: rgba(var(--color-rose-rgb), 0.6);
-    border-color: var(--color-rose);
-    border-width: 1px;
-    border-style: solid;
+    background-color: rgba(var(--color-rose-rgb), 0.1);
     border-radius: 0.25rem;
-    padding: 0.25rem;
-    color: var(--color-text);
+    padding: 0.5rem;
+    color: var(--color-rose);
+    font-weight: bold;
 }

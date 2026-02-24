@@ -10,6 +10,10 @@
     --color-iris: #c4a7e7;
     --color-overlay: #26233a;
     --color-subtle: #908caa;
+    --color-highlight-high: #524f67;
+    --color-highlight-med: #403d52;
+    --color-highlight-low: #21202e;
+    --color-surface: #1f1d2e;
 
     --blink-speed: 1s;
     --holo-color: var(--color-rose);
@@ -90,6 +94,11 @@ a:hover {
 
 nav {
     margin-top: 1rem;
+}
+
+.card {
+    background-color: var(--color-surface);
+    border-radius: 0.25rem;
 }
 
 @keyframes blink {
