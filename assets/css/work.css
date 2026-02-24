@@ -37,6 +37,11 @@ h4 {
     margin-top: 0.5rem;
 }
 
+.entry p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .skills {
     display: flex;
     flex-wrap: wrap;
