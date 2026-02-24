@@ -1,5 +1,5 @@
 @font-face {
     font-family: "Monaspace Neon";
-    src: url("../fonts/Monaspace\ Neon\ Var.woff2") format("woff2"),
-        url("../fonts/Monaspace\ Neon\ Var.woff") format("woff");
+    src: url("../fonts/Monaspace\ Neon\ Var.subset.woff2") format("woff2");
+    font-display: swap;
 }
