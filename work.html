@@ -5,6 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Lucas Queiroz</title>
+        <meta
+            name="description"
+            content="Work experience and education of Lucas Queiroz — Software Engineer with a background in Python, TypeScript, and distributed systems."
+        />
+        <meta property="og:title" content="Lucas Queiroz — Work" />
+        <meta property="og:description" content="Work experience and education of Lucas Queiroz — Software Engineer with a background in Python, TypeScript, and distributed systems." />
+        <meta property="og:image" content="assets/images/og/work-og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />
 
         <link
             rel="icon"
@@ -23,6 +33,16 @@
             sizes="16x16"
             href="assets/images/favicon/favicon-16x16.png"
         />
+        <link
+            rel="preload"
+            href="assets/fonts/Monaspace Neon Var.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link rel="preload" href="assets/css/fonts.css" as="style" />
+        <link rel="preload" href="assets/css/main.css" as="style" />
+        <link rel="preload" href="assets/css/work.css" as="style" />
         <link rel="stylesheet" href="assets/css/fonts.css" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/work.css" />
@@ -35,16 +55,25 @@
                         <div class="hologram">
                             <picture>
                                 <source
-                                    srcset="assets/images/profile/profile.webp"
+                                    srcset="
+                                        assets/images/profile/profile-64.webp   64w,
+                                        assets/images/profile/profile-128.webp 128w
+                                    "
+                                    sizes="64px"
                                     type="image/webp"
                                 />
                                 <img
-                                    src="assets/images/profile/profile.png"
+                                    src="assets/images/profile/profile-64.png"
+                                    srcset="
+                                        assets/images/profile/profile-64.png   64w,
+                                        assets/images/profile/profile-128.png 128w
+                                    "
+                                    sizes="64px"
                                     alt="An AI generated image of Lucas Queiroz, wearing a space suit, using the Rosé Pine color palette."
                                     loading="lazy"
                                     decoding="async"
-                                    width="64px"
-                                    height="64px"
+                                    width="64"
+                                    height="64"
                                 />
                             </picture>
                         </div>

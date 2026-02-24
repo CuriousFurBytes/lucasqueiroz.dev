@@ -1,0 +1,19 @@
+.center-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+@media (min-width: 50ch) {
+    .small-card {
+        width: 50ch;
+    }
+}
+
+.summary {
+    color: var(--color-subtle);
+    text-justify: inter-word;
+    text-align: justify;
+}
