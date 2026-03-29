@@ -1,0 +1,18 @@
+[py-ssg]
+name = "Lucas Queiroz"
+url = "https://lucasqueiroz.dev"
+cache = true
+
+[py-ssg.server]
+port = 8000
+
+[py-ssg.syntax]
+enabled = false
+
+[py-ssg.toc]
+enabled = false
+max_depth = 3
+
+[[py-ssg.authors]]
+name = "Lucas Queiroz"
+email = "hello@lucasqueiroz.dev"
